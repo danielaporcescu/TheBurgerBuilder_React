@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Auxil from '../../hoc/auxil';
+import Auxil from '../../hoc/Auxil';
 import classes from './Layout.module.css';
 
 const layout = (props) => (
