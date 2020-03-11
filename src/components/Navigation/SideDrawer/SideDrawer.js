@@ -4,7 +4,7 @@ import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import Auxil from '../../../hoc/Auxil';
+import Auxil from '../../../hoc/Auxi/Auxil';
 
 const sideDrawer = (props) => {
 
