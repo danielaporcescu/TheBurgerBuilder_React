@@ -12,6 +12,7 @@ const burger = (props) => {
         .reduce((arr, el) => {
             return arr.concat(el)
         }, []);
+    // eslint-disable-next-line
     if (transformedIngredients == 0) {
         transformedIngredients = <p>Please, start adding ingredients</p>;
     }
