@@ -6,12 +6,19 @@
 }
 
 .BuildControl button {
-    display: block;
-    font: inherit;
-    padding: 5px;
-    margin: 0 5px;
+    display:inline-block;
     width: 80px;
+    padding: 5px;
     border: 1px solid #AA6817;
+    border-radius:0.12em;
+    margin: 0 5px;
+    text-decoration:none;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font:inherit; 
+    color: #FFFFFF; 
+    text-align: center;
+    transition: all 0.2s;
     cursor: pointer;
     outline: none;
 }
