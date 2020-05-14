@@ -5,7 +5,7 @@ export function purchaseBurgerSuccess(id, orderData) {
     return {
         type: actionTypes.PURCHASE_BURGER_SUCCESS,
         orderId: id,
-        orderId: orderData
+        orderData: orderData
     };
 };
 export function purchaseBurgerFail(error) {
