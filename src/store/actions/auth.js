@@ -22,6 +22,20 @@ export function authFail(error) {
     };
 };
 
+export function logOut() {
+    return {
+        type: actionTypes.AUTH_LOGOUT
+    };
+};
+
+export function checkAuthTimeout(expirationTime) {
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(logOut());
+        }, expirationTime * 1000);
+    };
+};
+
 export const auth = (email, password, isSignUp) => {
     return dispatch => {
         dispatch(authStart());
@@ -38,7 +52,10 @@ export const auth = (email, password, isSignUp) => {
             .then(response => {
                 console.log(response);
                 //localId is taken from the console response in browser, this is it's name
+                //response.data is take from azios response and ha sit's propreties like
+                //expiresIn and other that can be passed along
                 dispatch(authSuccess(response.data.idToken, response.data.localId));
+                dispatch(checkAuthTimeout(response.data.expiresIn));
             })
             .catch(err => {
                 console.log(err);
