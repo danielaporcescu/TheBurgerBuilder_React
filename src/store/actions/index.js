@@ -10,8 +10,6 @@ export {
 } from './order';
 export {
     auth,
-    authFail,
-    authSuccess,
-    authStart,
-    logout
+    logout,
+    setAuthRedirectPath
 } from './auth';
