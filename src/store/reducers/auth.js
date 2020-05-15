@@ -1,6 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
 import { updatedObject } from '../utility';
-import { act } from 'react-dom/test-utils';
 
 const initialState = {
     token: null,
