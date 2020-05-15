@@ -22,7 +22,7 @@ export function authFail(error) {
     };
 };
 
-export function logOut() {
+export function logout() {
     return {
         type: actionTypes.AUTH_LOGOUT
     };
@@ -31,7 +31,7 @@ export function logOut() {
 export function checkAuthTimeout(expirationTime) {
     return dispatch => {
         setTimeout(() => {
-            dispatch(logOut());
+            dispatch(logout());
         }, expirationTime * 1000);
     };
 };
