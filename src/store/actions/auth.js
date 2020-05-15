@@ -7,10 +7,11 @@ export function authStart() {
     };
 };
 
-export function authSuccess(authData) {
+export function authSuccess(token, userId) {
     return {
         type: actionTypes.AUTH_SUCCESS,
-        authData: authData
+        idToken: token,
+        userId: userId
     };
 };
 
@@ -36,7 +37,8 @@ export const auth = (email, password, isSignUp) => {
         axios.post(url, authData)
             .then(response => {
                 console.log(response);
-                dispatch(authSuccess(response.data));
+                //localId is taken from the console response in browser, this is it's name
+                dispatch(authSuccess(response.data.idToken, response.data.localId));
             })
             .catch(err => {
                 console.log(err);
