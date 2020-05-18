@@ -17,7 +17,7 @@ const asyncOrders = asyncComponent(() => {
 });
 
 const asyncAuth = asyncComponent(() => {
-  return import('./containers/Orders/Orders');
+  return import('./containers/Auth/Auth');
 });
 
 
