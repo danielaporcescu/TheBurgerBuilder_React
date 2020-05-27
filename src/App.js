@@ -24,7 +24,8 @@ const App = props => {
   // [] passed so the function will execute just once or on a change
   useEffect(() => {
     props.onTryAutoSignup();
-  }, [props]);
+    // eslint-disable-next-line
+  }, []);
 
   let routes = (
     <Switch>

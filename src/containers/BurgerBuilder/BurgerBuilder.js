@@ -17,7 +17,8 @@ export const BurgerBuilder = props => {
 
     useEffect(() => {
         props.onInitIngredients();
-    }, [props]);
+        // eslint-disable-next-line
+    }, []);
 
     const updatePurchaseState = (ingredients) => {
         const sum = Object.keys(ingredients)
