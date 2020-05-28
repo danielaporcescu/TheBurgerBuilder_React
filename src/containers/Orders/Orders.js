@@ -20,13 +20,10 @@ const Orders = props => {
                 key={order.id}
                 ingredients={order.ingredients}
                 price={order.price} />
-        ))
+        ));
     }
-    return (
-        <div>
-            {orders}
-        </div >
-    );
+    return <div>{orders}</div >
+
 }
 
 const mapStateToProps = state => {
