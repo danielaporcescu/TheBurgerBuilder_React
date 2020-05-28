@@ -31,7 +31,7 @@ const mapStateToProps = state => {
     return {
         orders: state.order.orders,
         loading: state.order.loading,
-        //auth and orders taken from index.js froom combined reducers
+        //auth and orders taken from index.js from combined reducers
         token: state.auth.token,
         userId: state.auth.userId
     }
