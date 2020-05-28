@@ -21,11 +21,11 @@ const Auth = React.lazy(() => {
 
 
 const App = props => {
+  const { onTryAutoSignup } = props;
   // [] passed so the function will execute just once or on a change
   useEffect(() => {
-    props.onTryAutoSignup();
-    // eslint-disable-next-line
-  }, []);
+    onTryAutoSignup();
+  }, [onTryAutoSignup]);
 
   let routes = (
     <Switch>
